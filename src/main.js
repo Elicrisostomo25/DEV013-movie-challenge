@@ -1,29 +1,44 @@
 import home from './view/viewHome.js';
 import cards from './view/viewMovieDetail.js';
-/* Recomendamos usar src/main.js, como punto de entrada de tu aplicación. Aquí es donde recomendamos implementar su SPA (Single Page Application).
-*/
+import mostrarData from './components/app.js'
+import llamadoApi from './lib/apiMovie.js';
+import contenidoTarjeta from './components/appContenido.js';
+
 //crear una variable para traer la información de HTML y enlazar el contido de Home cuando esté cargado
 
-const contenerdorHtml = document.querySelector('#root');
+const contenedorHtml = document.querySelector('#root');
+const contenedorCards= document.querySelector('#contenedor-cards'); 
+const VistaPosterior= document.querySelector('#vistaTarjeta');
+
 
 const init = () => {
-    window.addEventListener('hashChange', () => {
-        contenerdorHtml.innerHTML = "";
+    window.addEventListener('hashchange', () => {
+        contenedorHtml.innerHTML = "";
         switch (window.location.hash) {
-            case "":
-                contenerdorHtml.appendChild(home());
+            case " ":
+                contenedorHtml.appendChild(home());
                 break;
-            case "/#card":
-                contenerdorHtml.appendChild(cards());
+            case "#card":
+                contenedorHtml.appendChild(cards());
                 break;
             default:
-                contenerdorHtml.appendChild(home());
-                break;
+                contenedorHtml.appendChild(home());
         }
     });
 };
-
 window.addEventListener("load", () => {
-    contenerdorHtml.appendChild(home());
+    contenedorHtml.appendChild(home());
     init();
 });
+
+
+// contenedorCards.addEventListener('click', (e) => {
+//   });
+
+
+    //crear un evento para escuchar el click
+    //cuando haga click ejecutar una función 
+    //que se identifique que elemento fue clickeado 
+    //que cambie de vista y se muestre el contenido de la tarjeta
+
+
