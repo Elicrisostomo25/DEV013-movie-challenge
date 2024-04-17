@@ -1,5 +1,6 @@
 //Elementos HTML
-//Renderizado de data HTML
+import mostrarData from "../components/app.js";
+
 export default () => { 
 const container = document.createElement('div');
 
@@ -44,7 +45,8 @@ const template = `
 
 `;
 container.innerHTML = template;
-
+const renderData= container.querySelector('#contenedor-cards')
+renderData.appendChild(mostrarData());
 return container;
 //contenido de la vista Home
 };

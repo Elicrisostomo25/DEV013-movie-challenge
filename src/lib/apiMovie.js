@@ -1,4 +1,3 @@
-
 //hacer el export para enlazar con otras paginas para usar fuciones y const.
 //Guardo en constantes los datos fuertes de la API.
 import mostrarData from '../components/app.js';
@@ -20,15 +19,17 @@ const options = {
 };
 //llamadoApi(llamado_URL);
 
-function llamadoApi(){    
-fetch(llamado_URL, options)
-    .then(response => response.json())//convertir la respuesta en archivo JSON
-    .then(response => {
+function llamadoApi(){      
+return fetch(llamado_URL, options)
+    .then(function(respuestaFetch){return respuestaFetch.json()})//convertir la respuesta en archivo JSON
+    .then(data => {
         //mostrarData(data.results);
-        console.log(response.results);
-        return response.results;
+        //console.log(data.results);
+        return data.results;
         
     })
     .catch(error => console.error(error));
+
 }
-export default llamadoApi();
+
+export default llamadoApi;

@@ -13,6 +13,8 @@ export default () => {
     </div>
     `;
 container.innerHTML = template;
+const renderData= container.querySelector('#contenedor-cards')
+renderData.appendChild(contenidoTarjeta());
 return container;
 //contenido de la vista card
 };

@@ -4,15 +4,14 @@ import llamadoApi from '../lib/apiMovie.js'
 const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
 
 export default function mostrarData() {
-    //console.log(llamadoApi);
+    console.log(llamadoApi);
     //navegar por los resultados de las pelis y hacer el llamado a las propiedades que necesito mostrar
-    const VistaPrincipal= document.createElement('div');
-    llamadoApi()
-
-        .then(response => {
-            VistaPrincipal.innerHTML="";
-
-            response.forEach(movie => {
+    const vistaPrincipal= document.createElement('div');
+    llamadoApi
+        .then((data) => {
+            
+            vistaPrincipal.innerHTML="";
+            data.forEach(movie => {
                 const lista = document.createElement('div');//Se crea una const almacenar info del nodo que se va a crear
                 console.log(movie);
                 lista.classList.add('movie'); //se le da una clase
@@ -27,12 +26,14 @@ export default function mostrarData() {
         
                 </div>
                 `
-                const contenedorCards = document.querySelector('#contenedor-cards');
-                contenedorCards.appendChild(lista);
-                return lista;
+                //const contenedorCards = document.querySelector('#contenedor-cards');
+            vistaPrincipal.appendChild(lista);
             })
-
-        });
-    //return    
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    //contenedorCards.appendChild(vistaPrincipal);
+    return vistaPrincipal;    
 };
 

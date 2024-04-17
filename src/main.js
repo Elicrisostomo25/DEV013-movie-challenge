@@ -5,7 +5,6 @@ import llamadoApi from './lib/apiMovie.js';
 import contenidoTarjeta from './components/appContenido.js';
 
 //crear una variable para traer la información de HTML y enlazar el contido de Home cuando esté cargado
-
 const contenedorHtml = document.querySelector('#root');
 const contenedorCards= document.querySelector('#contenedor-cards'); 
 const VistaPosterior= document.querySelector('#vistaTarjeta');
@@ -30,7 +29,6 @@ window.addEventListener("load", () => {
     contenedorHtml.appendChild(home());
     init();
 });
-
 
 // contenedorCards.addEventListener('click', (e) => {
 //   });
