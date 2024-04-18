@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: "Prompt", sans-serif;
     display: flex;
@@ -19,7 +20,7 @@ header {
     justify-content: center;
 }
 
-.menu{
+.menu {
     display: contents;
     width: 100%;
     height: 30px;
@@ -28,7 +29,7 @@ header {
 
 }
 
-#bx-buscador{
+#bx-buscador {
     background-color: transparent;
     border: 2px solid #31544E;
     padding: 2px 2px;
@@ -38,14 +39,17 @@ header {
     color: #fff;
     justify-content: flex-start;
 }
-#buscador:focus{
+
+#buscador:focus {
     outline: 0;
     background-color: #12211F;
 }
-#buscador::placeholder{
+
+#buscador::placeholder {
     color: #fff;
 }
-.bx{
+
+.bx {
     font-size: 18px;
 }
 
@@ -55,7 +59,7 @@ header {
     flex-wrap: wrap;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 #contenedor-cards div {
@@ -70,26 +74,31 @@ header {
     justify-content: space-between;
     letter-spacing: 0.5;
     background-color: #31544E;
-   
+
 }
+
 #contenedor-cards div img {
-    box-shadow: 0px 10px, 6px, -6px rgba(6,4,12,0.801);
+    box-shadow: 0px 10px, 6px, -6px rgba(6, 4, 12, 0.801);
     max-width: 250px;
 }
-h3, h4, ul {
+
+h3,h4,ul {
     color: #fff;
 }
 
 .contenedor-cards .movie:hover {
-transform: scale(1.1);
-transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .vistaTarjeta {
     min-height: 100vh;
+    background-image: url('IMG_URL + movie.poster_path');
+    background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de opacidad */
     background-size: cover;
 
 }
+
 .cara-posterior {
 
     min-height: 100vh;
@@ -97,12 +106,13 @@ transition: 0.5s;
     grid-template-columns: 480px 1fr;
     grid-gap: 32px;
     backdrop-filter: blur(12px) contrast(80%);
-    color:#fff;
+    color: #fff;
     margin-top: 32px;
     margin-bottom: 32px;
     margin-right: 32px;
 
 }
+
 .img1 {
     width: 480px;
     height: 100vh;
@@ -111,12 +121,12 @@ transition: 0.5s;
     transition: all 0.5s ease-in-out;
 }
 
-.title1{
+.title1 {
     font-size: 64px;
     font-weight: bold;
 }
 
-.fecha1 .votación .resumen {
+.title1.fecha1 .votación .resumen {
     display: inline-block;
     margin-right: 64px;
     font-size: 22px;
@@ -124,6 +134,4 @@ transition: 0.5s;
 
 .resumen {
     line-height: 24px;
-} 
-
-
+}

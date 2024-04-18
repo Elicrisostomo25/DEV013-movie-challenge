@@ -6,9 +6,8 @@ import contenidoTarjeta from './components/appContenido.js';
 
 //crear una variable para traer la información de HTML y enlazar el contido de Home cuando esté cargado
 const contenedorHtml = document.querySelector('#root');
-const contenedorCards= document.querySelector('#contenedor-cards'); 
-const VistaPosterior= document.querySelector('#vistaTarjeta');
-
+// const contenedorCards= document.querySelector('#contenedor-cards'); 
+// const VistaPosterior= document.querySelector('#vistaTarjeta');
 
 const init = () => {
     window.addEventListener('hashchange', () => {
@@ -32,7 +31,6 @@ window.addEventListener("load", () => {
 
 // contenedorCards.addEventListener('click', (e) => {
 //   });
-
 
     //crear un evento para escuchar el click
     //cuando haga click ejecutar una función 

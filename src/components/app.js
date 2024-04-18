@@ -4,16 +4,16 @@ import llamadoApi from '../lib/apiMovie.js'
 const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
 
 export default function mostrarData() {
-    console.log(llamadoApi);
+    //console.log(llamadoApi);
     //navegar por los resultados de las pelis y hacer el llamado a las propiedades que necesito mostrar
     const vistaPrincipal= document.createElement('div');
     llamadoApi
-        .then((data) => {
+        .then((data)=> {
             
             vistaPrincipal.innerHTML="";
             data.forEach(movie => {
                 const lista = document.createElement('div');//Se crea una const almacenar info del nodo que se va a crear
-                console.log(movie);
+                //console.log(movie);
                 lista.classList.add('movie'); //se le da una clase
                 lista.innerHTML =
                 `

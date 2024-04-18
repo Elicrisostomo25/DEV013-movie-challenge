@@ -17,19 +17,18 @@ const options = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2MzY3OGFkZmI5ZmIzMjliMTQxMTg2ODhkMjI4Y2M3YyIsInN1YiI6IjY2MDJjZWRkNjJmMzM1MDE3ZDU0YjU2ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.jVy7rtwPFuZj3ATnIwsk87852ZIfDvmMXJ2SoMHDiqw'
     }
 };
-//llamadoApi(llamado_URL);
 
 function llamadoApi(){      
 return fetch(llamado_URL, options)
-    .then(function(respuestaFetch){return respuestaFetch.json()})//convertir la respuesta en archivo JSON
+    .then(res => res.json())//convertir la respuesta en archivo JSON
     .then(data => {
         //mostrarData(data.results);
         //console.log(data.results);
-        return data.results;
+    return data.results;
         
     })
     .catch(error => console.error(error));
 
 }
 
-export default llamadoApi;
+export default llamadoApi();

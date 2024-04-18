@@ -45,7 +45,7 @@ const template = `
 
 `;
 container.innerHTML = template;
-const renderData= container.querySelector('#contenedor-cards')
+const renderData= container.querySelector('#contenedor-cards');
 renderData.appendChild(mostrarData());
 return container;
 //contenido de la vista Home

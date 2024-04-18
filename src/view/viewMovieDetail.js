@@ -6,15 +6,15 @@ export default () => {
 
     const template = 
     `
-    <div class="vistaTarjeta" id="vistaTarjeta">
-        <a href="/#home></a>
-        <i class='bx bx-home'></i>
-        <p> Contenido Película </p> 
-    </div>
+        <div class="vistaTarjeta" id="vistaTarjeta">
+            <a href="/#home></a>
+                i class='bx bx-home'></i>
+            <p> Contenido Película </p> 
+        </div>
     `;
 container.innerHTML = template;
-const renderData= container.querySelector('#contenedor-cards')
-renderData.appendChild(contenidoTarjeta());
+const renderDataPost= container.querySelector('#vistaTarjeta');
+renderDataPost.appendChild(contenidoTarjeta());
 return container;
 //contenido de la vista card
 };
