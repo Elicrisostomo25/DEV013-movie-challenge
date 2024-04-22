@@ -20,12 +20,12 @@ const template = `
         
         </select>
     
-        <label class="order" for="ordenar"> Ordenar: </label>
-        <select class = "ordenar" name="orden" id="orden">
-            <option value="">--Seleccione--</option>
-            <option value="asc">A - Z</option>
-            <option value="desc">Z - A</option>
-        </select>
+        /* <label class="order" for="ordenar"> Ordenar: </label>
+             <select class = "ordenar" name="orden" id="orden">
+                <option value="">--Seleccione--</option>
+                <option value="asc">A - Z</option>
+                <option value="desc">Z - A</option>
+             </select>*/
         
         <button id="boton-limpiar">Limpiar</button>
         <div class="bx-buscador">

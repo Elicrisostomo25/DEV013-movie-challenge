@@ -7,9 +7,8 @@ export default () => {
     const template = 
     `
         <div class="vistaTarjeta" id="vistaTarjeta">
-            <a href="/#home></a>
-                i class='bx bx-home'></i>
-            <p> Contenido Película </p> 
+
+            <button class= "regresar-inicio"> Regresar a Inicio </button> 
         </div>
     `;
 container.innerHTML = template;

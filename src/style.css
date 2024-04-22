@@ -10,6 +10,7 @@ body {
     font-family: "Prompt", sans-serif;
     display: flex;
     background-color: #89B9AD;
+    margin: 0;
 
 }
 
@@ -18,6 +19,8 @@ header {
     display: flex;
     background-color: #31544E;
     justify-content: center;
+    width: auto;
+    
 }
 
 .menu {
@@ -53,52 +56,16 @@ header {
     font-size: 18px;
 }
 
-#contenedor-cards {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    overflow: hidden;
-
-}
-
-#contenedor-cards div {
-    flex: 4;
-    flex-direction: row;
-    width: 250px;
-    align-items: center;
-    margin: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    text-align: center;
-    justify-content: space-between;
-    letter-spacing: 0.5;
-    background-color: #31544E;
-
-}
-
-#contenedor-cards div img {
-    box-shadow: 0px 10px, 6px, -6px rgba(6, 4, 12, 0.801);
-    max-width: 250px;
-}
-
-h3,h4,ul {
-    color: #fff;
-}
-
-.contenedor-cards .movie:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-
-.vistaTarjeta {
+/*.vistaTarjeta {
     min-height: 100vh;
-    background-image: url('IMG_URL + movie.poster_path');
+
+}
+.vistaTarjeta .img2 {
+    background-image: url('https://image.tmdb.org/t/p/w500/');
     background-color: rgba(255, 255, 255, 0.5); /* Color blanco con 50% de opacidad */
     background-size: cover;
-
+    background-repeat: no-repeat;
 }
-
 .cara-posterior {
 
     min-height: 100vh;
@@ -134,4 +101,5 @@ h3,h4,ul {
 
 .resumen {
     line-height: 24px;
-}
+}  
+*/

@@ -16,7 +16,7 @@ export default function contenidoTarjeta() {
                 tarjeta.innerHTML =
                 `
                 <div class="card-posterior"> 
-                    <div class="card posterior" style="background-image: url('${IMG_URL + movie.poster_path}');"></div>
+                    <div class="img2" src="${IMG_URL + movie.poster_path}"></div>
                     <img class="img1" src=${IMG_URL + movie.poster_path} alt=${movie.title}>
                     <h3 class="title1">${movie.title}</h3>
                     <h4 class="fecha1">${movie.release_date}</h4>

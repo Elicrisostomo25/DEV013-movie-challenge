@@ -1,13 +1,14 @@
 import home from './view/viewHome.js';
 import cards from './view/viewMovieDetail.js';
-import mostrarData from './components/app.js'
-import llamadoApi from './lib/apiMovie.js';
-import contenidoTarjeta from './components/appContenido.js';
+// import mostrarData from './components/app.js'
+// import llamadoApi from './lib/apiMovie.js';
+// import contenidoTarjeta from './components/appContenido.js';
 
 //crear una variable para traer la información de HTML y enlazar el contido de Home cuando esté cargado
 const contenedorHtml = document.querySelector('#root');
-// const contenedorCards= document.querySelector('#contenedor-cards'); 
-// const VistaPosterior= document.querySelector('#vistaTarjeta');
+const contenedorCards= document.querySelector('#contenedor-cards'); 
+const VistaPosterior= document.querySelector('#vistaTarjeta');
+const btnRegresar= document.querySelector('regresar-inicio')
 
 const init = () => {
     window.addEventListener('hashchange', () => {
@@ -24,17 +25,27 @@ const init = () => {
         }
     });
 };
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
     contenedorHtml.appendChild(home());
     init();
 });
 
-// contenedorCards.addEventListener('click', (e) => {
-//   });
+//seleccionar al elemento esta quieres dar click 
+//luego se le agrega el evento click 
+//y se le pasa la función que quiero que cumpla una vez clickeado
+//hacer la ruta para mostrar la informacion
+//
+const rutaPeliculas = 
+contenedorCards.forEach(movie=> {
+    //se itera por cada pelicula y se le agrega el evento click con un listener
+    movie.addEventListener('click', () => {
+        window.location.hash = '#cards';
+    
+    });
+return rutaPeliculas;
+})
 
-    //crear un evento para escuchar el click
-    //cuando haga click ejecutar una función 
-    //que se identifique que elemento fue clickeado 
-    //que cambie de vista y se muestre el contenido de la tarjeta
 
-
+btnRegresar.addEventListener('click', ()=>{
+    window.location.hash = 'home';
+})
