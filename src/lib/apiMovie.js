@@ -23,7 +23,7 @@ return fetch(llamado_URL, options)
     .then(res => res.json())//convertir la respuesta en archivo JSON
     .then(data => {
         //mostrarData(data.results);
-        //console.log(data.results);
+        console.log(data.results);
     return data.results;
         
     })

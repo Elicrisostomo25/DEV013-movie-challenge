@@ -1,40 +1,61 @@
 import llamadoApi from '../lib/apiMovie.js';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
 
-export default function contenidoTarjeta() {
-    //console.log(llamadoApi);
-    //se crea una constante para almacenar el consumo de la API
-    const vistaPosterior= document.createElement('div');
-    llamadoApi
-        .then((data) => {
-            vistaPosterior.innerHTML="";
+export default function contenidoTarjeta(id) {
+  const vistaPosterior = document.createElement('div');
+  vistaPosterior.classList.add('movie', 'movie2'); //se le da una clase
+  llamadoApi
+    .then(data => {
+      const numeroId= parseInt(id);
+      const peliculaSeleccionada = data.find(movie=> movie.id === numeroId);
+      console.log(peliculaSeleccionada);
+      
+        const cardPosterior = document.createElement('div');
+        cardPosterior.classList.add('card-Posterior');
 
-            data.forEach(movie => {
-                const tarjeta = document.createElement('div');//Se crea una const almacenar info del nodo que se va a crear
-                //console.log(movie);
-                tarjeta.classList.add('movie'); //se le da una clase
-                tarjeta.innerHTML =
-                `
-                <div class="card-posterior"> 
-                    <div class="img2" src="${IMG_URL + movie.poster_path}"></div>
-                    <img class="img1" src=${IMG_URL + movie.poster_path} alt=${movie.title}>
-                    <h3 class="title1">${movie.title}</h3>
-                    <h4 class="fecha1">${movie.release_date}</h4>
-                    <ul>
-                        <li class="votacion">Votación: ${movie.vote_average}</li>
-                         <i class='bx bx-star'></i>
-                        // <li class="genero">Genero: ${movie.genreNames}</li> 
-                        <li class="resumen">Resumen: "${movie.overview}"</li>
-                    </ul>
-                
-                </div>
-                `
-                vistaPosterior.appendChild(tarjeta);
-            })
-        })
-        .catch(error=>{
-            console.log(error)
+        const cardInfo = document.createElement('div');
+        cardInfo.classList.add('card-info2');
 
-        });
-    return vistaPosterior;
+        const img = document.createElement('img');
+        img.classList.add('img1', 'img2');
+        img.setAttribute('src', IMG_URL + peliculaSeleccionada.poster_path);
+        img.setAttribute('alt', peliculaSeleccionada.title);
+
+        // const img2 = document.createElement('img');
+        // img2.classList.add('img2');
+        // img2.setAttribute('src', IMG_URL + peliculaSeleccionada.poster_path);
+        // img2.setAttribute('alt', peliculaSeleccionada.title);
+        const contenedor= document.querySelector('.vistaTarjeta');
+        contenedor.style.backgroundImage=`url(${IMG_URL + peliculaSeleccionada.poster_path})`;
+
+        const title = document.createElement('h3');
+        title.classList.add('title1');
+        title.textContent = peliculaSeleccionada.title;
+        
+        const fecha = document.createElement('h4');
+        fecha.classList.add('fecha1');
+        fecha.textContent = `Año de Lanzamiento: ${peliculaSeleccionada.release_date}`;
+
+        const ul = document.createElement('ul');
+        const votacion = document.createElement('li');
+        votacion.classList.add('votacion');
+        votacion.textContent = `Votación: ${peliculaSeleccionada.vote_average}`;
+
+        const resumenLi = document.createElement('li');
+        resumenLi.classList.add('resumen');
+        resumenLi.textContent = `Resumen: "${peliculaSeleccionada.overview}"`;
+
+        ul.appendChild(votacion);
+        ul.appendChild(resumenLi);
+
+        cardInfo.appendChild(title);
+        cardInfo.appendChild(fecha);
+        cardInfo.appendChild(ul);
+
+        cardPosterior.appendChild(img);
+        cardPosterior.appendChild(cardInfo);
+        vistaPosterior.appendChild(cardPosterior);
+  
+      })
+  return vistaPosterior;
 };    
