@@ -21,13 +21,6 @@ export default function contenidoTarjeta(id) {
         img.setAttribute('src', IMG_URL + peliculaSeleccionada.poster_path);
         img.setAttribute('alt', peliculaSeleccionada.title);
 
-        // const img2 = document.createElement('img');
-        // img2.classList.add('img2');
-        // img2.setAttribute('src', IMG_URL + peliculaSeleccionada.poster_path);
-        // img2.setAttribute('alt', peliculaSeleccionada.title);
-        const contenedor= document.querySelector('.vistaTarjeta');
-        contenedor.style.backgroundImage=`url(${IMG_URL + peliculaSeleccionada.poster_path})`;
-
         const title = document.createElement('h3');
         title.classList.add('title1');
         title.textContent = peliculaSeleccionada.title;

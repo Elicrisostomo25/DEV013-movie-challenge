@@ -89,32 +89,21 @@ div .movie2 {
     width: 50%;
     padding: 10px;
 }
-.card-posterior {
-    display: inline-block;
-    min-height: 100vh;
+.card-Posterior {
     display: flex;
     padding: 5px;
     color: #fff;
-    text-align: left;
 
 }
 
 .img2 {
-    max-width: 480px;
+    width: 1000px;
     height: 100vh;
     overflow: hidden;
 }
 
-.vistaTarjeta .img1 {
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.1;
-}
-
 .title1 {
-    font-size: 64px;
+    font-size: 32px;
     font-weight: bold;
 
 }
