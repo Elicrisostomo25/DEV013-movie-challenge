@@ -1,6 +1,5 @@
 //Elementos HTML
 import contenidoTarjeta from "../components/appContenido.js";
-// import mostrarData from "../components/app.js";
 
 export default () => {
     const container = document.createElement('div');

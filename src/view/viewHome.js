@@ -8,15 +8,8 @@ export default () => {
     <header>
       <h1>PELISPEDIA</h1>
     </header>
-    <div class="menu">
-      <a href="/#"></a>
-      <label class="genre" for="filtro"> Genero: </label>
-      <select class = "genero" name="filtro" id="filtro">
-        <option value="">--Seleccione--</option>
-      </select>
-    </div> 
+
     <div class="contenedor-cards" id="contenedor-cards">
-      <a href="/#card"></a>
     </div>
     <footer> @Elisabeth Crisóstomo</footer>
 `;

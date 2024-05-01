@@ -1,7 +1,6 @@
 /*Este archivo contiene un componente ejemplo que muestra cómo podemos representar un componente en función que devuelve un HTMLElement. 
 function cambiar a app, renderizado de la cards*/
 import llamadoApi from '../lib/apiMovie.js';
-import cards from '../view/viewMovieDetail.js';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
 
 export default function mostrarData() {
